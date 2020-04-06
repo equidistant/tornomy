@@ -99,6 +99,9 @@ const Logo = styled.img.attrs(props => ({
   }))`
   object-fit: cover;
   width: 300px;
+  @media only screen and (min-width: 1250px) {
+    width: 550px;
+  }
 `
 
 const CoverText = styled.div`
@@ -109,6 +112,11 @@ const CoverText = styled.div`
   text-align: center;
   margin-top: 8px;
   color: rgba(255,255,255,0.8);
+  max-width: 250px;
+  @media only screen and (min-width: 1250px) {
+    font-size: 20px;
+    max-width: 500px;
+  }
 `
 
 const TextSection = styled.div`
@@ -117,7 +125,7 @@ const TextSection = styled.div`
   flex-direction: column;
   align-items: center;
   color: rgb(18,27,35);
-  max-width: 600px;
+  max-width: 690px;
 `
 
 // background-color: #f2f2f2;
@@ -169,6 +177,7 @@ const Image = styled.img.attrs(props => ({
   object-fit: cover;
   width: 100%;
   margin-bottom: 32px;
+  border-radius: 4px;
 `
 
 const SmallHeader = styled.div`
