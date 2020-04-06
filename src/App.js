@@ -71,6 +71,7 @@ const CenterCover = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 64px;
 `
 
 const Logo = styled.img.attrs(props => ({
@@ -118,8 +119,8 @@ const Text = styled.div`
 `
 
 const Divider = styled.div`
-  border-bottom: 1px solid rgba(18,27,35, 0.6);
-  width: 150px;
+  border-bottom: 1px solid rgba(18,27,35, 0.4);
+  width: 100px;
   margin-top 32px;
   margin-bottom: 32px;
 `
