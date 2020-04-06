@@ -7,9 +7,9 @@ export default () => {
     <>
       <GlobalStyle />
       <Root>
-        <Cover img={`${process.env.PUBLIC_URL}/cover.png`}>
+        <Cover src={`${process.env.PUBLIC_URL}/cover.png`}>
           <CenterCover>
-            <Logo img={{ src: `${process.env.PUBLIC_URL}/logo-smaller.png`}} />
+            <Logo src={`${process.env.PUBLIC_URL}/logo-smaller.png`} />
             <CoverText>Professional custodial solutions for digital assets</CoverText>
           </CenterCover>
         </Cover>
@@ -34,6 +34,26 @@ export default () => {
               <ListItem>Ripple</ListItem>
               <ListItem>Cardano</ListItem>
             </List>
+            <Image src={`${process.env.PUBLIC_URL}/safe.jpg`} />
+            <Text>
+              Additionally, we provide consulting and advisory services to our business customers who need help or solutions around topics such as:
+            </Text>
+            <List>
+              <ListItem>online security and audits</ListItem>
+              <ListItem>self-storage solutions of digital assets and similar</ListItem>
+            </List>
+            <Image src={`${process.env.PUBLIC_URL}/shield.jpg`} />
+            <SmallHeader>Privacy and Cookie Policy</SmallHeader>
+            <SmallText>
+              At Tornomy, we’re committed to protecting and respecting your privacy and govern your access to and use of this website, and associated content.
+            </SmallText>
+            <SmallDivider />
+            <SmallText>
+              Therefore, Tornomy does not collect personal or any other information about its website visitors, data or cookies about people who visit our website or use our services.
+              We also do not collect information related to your including IP address, geographic location, and date and time of your request.
+            </SmallText>
+            <SmallDivider />
+            <SmallText>We may change this Privacy Policy from time to time so please check this page occasionally to ensure that you are happy with any changes.</SmallText>
           </CenterTextSection>
         </TextSection>
         <Footer>
@@ -57,9 +77,9 @@ const Root = styled.div`
 const Cover = styled.div`
   width: 100%;
   height: 100vh;
-  background-image: url(${props => props.img});
+  background-image: url(${props => props.src});
   background-size: cover;
-  background-position: right;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,7 +95,7 @@ const CenterCover = styled.div`
 `
 
 const Logo = styled.img.attrs(props => ({
-  src: props.img.src
+  src: props.src
   }))`
   object-fit: cover;
   width: 300px;
@@ -131,12 +151,47 @@ const List = styled.ul`
   letter-spacing: 0.5px;
   line-height: 1.6;
   margin-top: 16px;
-  padding-left: 32px;
+  padding-left: 40px;
   align-self: flex-start;
+  margin-bottom: 32px;
 `
 
 const ListItem = styled.li`
 
+`
+
+const Image = styled.img.attrs(props => ({
+  src: props.src
+  }))`
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 32px;
+`
+
+const SmallHeader = styled.div`
+  font-family: Roboto;
+  font-size: 16px;
+  letter-spacing: 0.25px;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 16px;
+`
+
+const SmallText = styled.div`
+  font-family: Roboto;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
+  text-align: justify;
+  word-break: break-word;
+  opacity: 0.8;
+`
+
+const SmallDivider = styled.div`
+  border-bottom: 1px solid rgba(18,27,35, 0.4);
+  width: 100px;
+  margin-top 24px;
+  margin-bottom: 24px;
 `
 
 const Footer = styled.div`
@@ -147,7 +202,6 @@ const Footer = styled.div`
   width: 100%;
   height: 100px;
   background-color: rgb(18,27,35);
-
 `
 
 const CenterFooter = styled.div`
