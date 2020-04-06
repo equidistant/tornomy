@@ -71,7 +71,7 @@ const Root = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-    background-color: #f2f2f2;
+  background-color: rgba(67,170,203,0.2);
 `
 
 const Cover = styled.div`
@@ -91,7 +91,7 @@ const CenterCover = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 64px;
+  margin-bottom: 80px;
 `
 
 const Logo = styled.img.attrs(props => ({
@@ -102,13 +102,13 @@ const Logo = styled.img.attrs(props => ({
 `
 
 const CoverText = styled.div`
-  color: white;
   font-family: Roboto;
   font-size: 16px;
   letter-spacing: 0.5px;
   line-height: 1.6;
   text-align: center;
-  margin-top: 16px;
+  margin-top: 8px;
+  color: rgba(255,255,255,0.8);
 `
 
 const TextSection = styled.div`
@@ -117,7 +117,7 @@ const TextSection = styled.div`
   flex-direction: column;
   align-items: center;
   color: rgb(18,27,35);
-  max-width: 800px;
+  max-width: 600px;
 `
 
 // background-color: #f2f2f2;
@@ -193,8 +193,8 @@ const SmallText = styled.div`
 const SmallDivider = styled.div`
   border-bottom: 1px solid rgba(18,27,35, 0.4);
   width: 100px;
-  margin-top 16px;
-  margin-bottom: 16px;
+  margin-top 24px;
+  margin-bottom: 24px;
 `
 
 const Footer = styled.div`
