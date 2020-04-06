@@ -22,3 +22,6 @@ export const GlobalStyle = createGlobalStyle`
     outline: none;
   }
 `
+
+// rgb(67,170,203);
+// rgb(18,27,35)
