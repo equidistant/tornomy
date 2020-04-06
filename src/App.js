@@ -9,7 +9,8 @@ export default () => {
       <Root>
         <Cover img={`${process.env.PUBLIC_URL}/cover.png`}>
           <CenterCover>
-            <Logo img={{ src: `${process.env.PUBLIC_URL}/logo.png`}} />
+            <Logo img={{ src: `${process.env.PUBLIC_URL}/logo-smaller.png`}} />
+            <CoverText>Professional custodial solutions for digital assets</CoverText>
           </CenterCover>
         </Cover>
         <TextSection>
@@ -36,7 +37,9 @@ export default () => {
           </CenterTextSection>
         </TextSection>
         <Footer>
-          Copyrights © 2020. All Rights Reserved by Tornomy Wallet Co. OÜ
+          <CenterFooter>
+            Copyrights © 2020. All Rights Reserved by Tornomy Wallet Co. OÜ
+          </CenterFooter>
         </Footer>
       </Root>
     </>
@@ -65,6 +68,7 @@ const Cover = styled.div`
 
 const CenterCover = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 `
@@ -74,6 +78,16 @@ const Logo = styled.img.attrs(props => ({
   }))`
   object-fit: cover;
   width: 300px;
+`
+
+const CoverText = styled.div`
+  color: white;
+  font-family: Roboto;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 16px;
 `
 
 const TextSection = styled.div`
@@ -90,7 +104,6 @@ const CenterTextSection = styled.div`
   align-items: center;
   background-color: #ffffff;
   margin: 24px;
-
   padding: 40px;
   border-radius: 4px;
 `
@@ -129,9 +142,14 @@ const Footer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 70px;
+  height: 100px;
   background-color: rgb(18,27,35);
+
+`
+
+const CenterFooter = styled.div`
   text-align: center;
   font-size: 14px;
   font-weight: 400;
@@ -139,4 +157,5 @@ const Footer = styled.div`
   line-height: 1.4;
   color: #FAFAFA;
   font-family: Roboto;
+  width: 75%;
 `
