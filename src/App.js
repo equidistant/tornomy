@@ -42,8 +42,11 @@ export default () => {
               <ListItem>online security and audits</ListItem>
               <ListItem>self-storage solutions of digital assets and similar</ListItem>
             </List>
+            <ContactText>
+              If you are interested to learn more about how we can help your business, please <Link href={'mailto:info@tornomy.com'}>contact us</Link>.
+            </ContactText>
             <Image src={`${process.env.PUBLIC_URL}/shield.jpg`} />
-            <SmallHeader>Privacy and Cookie Policy</SmallHeader>
+              <SmallHeader>Privacy and Cookie Policy</SmallHeader>
             <SmallText>
               At Tornomy, we’re committed to protecting and respecting your privacy and govern your access to and use of this website, and associated content.
             </SmallText>
@@ -149,6 +152,10 @@ const Text = styled.div`
   word-break: break-word;
 `
 
+const ContactText = styled(Text)`
+  margin-bottom: 32px;
+`
+
 const Divider = styled.div`
   border-bottom: 1px solid rgba(18,27,35, 0.4);
   width: 100px;
@@ -180,6 +187,14 @@ const Image = styled.img.attrs(props => ({
   border-radius: 4px;
 `
 
+const SmallHeaderWrap = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+`
+
 const SmallHeader = styled.div`
   font-family: Roboto;
   font-size: 16px;
@@ -204,6 +219,11 @@ const SmallDivider = styled.div`
   width: 100px;
   margin-top 24px;
   margin-bottom: 24px;
+`
+
+const Link = styled.a`
+  font-weight: bold;
+  color: rgb(18,27,35);
 `
 
 const Footer = styled.div`
