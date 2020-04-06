@@ -71,7 +71,7 @@ const Root = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-
+    background-color: #f2f2f2;
 `
 
 const Cover = styled.div`
@@ -113,8 +113,11 @@ const CoverText = styled.div`
 
 const TextSection = styled.div`
   width: 100%;
-  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: rgb(18,27,35);
+  max-width: 800px;
 `
 
 // background-color: #f2f2f2;
@@ -174,12 +177,12 @@ const SmallHeader = styled.div`
   letter-spacing: 0.25px;
   line-height: 1.6;
   font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 `
 
 const SmallText = styled.div`
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.2px;
   line-height: 1.4;
   text-align: justify;
@@ -190,8 +193,8 @@ const SmallText = styled.div`
 const SmallDivider = styled.div`
   border-bottom: 1px solid rgba(18,27,35, 0.4);
   width: 100px;
-  margin-top 24px;
-  margin-bottom: 24px;
+  margin-top 16px;
+  margin-bottom: 16px;
 `
 
 const Footer = styled.div`
