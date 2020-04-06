@@ -71,7 +71,7 @@ const Root = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: rgba(67,170,203,0.2);
+  background-color: #f2f2f2;
 `
 
 const Cover = styled.div`
